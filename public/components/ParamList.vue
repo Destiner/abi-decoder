@@ -4,8 +4,8 @@
 			<div v-if="isNested(params[key])">
 				{{ key }}: <param-list :params="params[key]" />
 			</div>
-			<div v-else>
-				{{ key }}: {{ formatParam(params[key]) }}
+			<div class="param" v-else>
+				{{ key }}: {{ params[key] }}
 			</div>
 		</div>
 	</div>
@@ -18,13 +18,6 @@ export default {
 	methods: {
 		isNested(param) {
 			return Array.isArray(param);
-		},
-		formatParam(param) {
-			const paramString = param.toString();
-			if (paramString.length <= 32) {
-				return paramString;
-			}
-			return `${param.toString().slice(0, 32)}...`;
 		},
 	},
 	computed: {
@@ -53,5 +46,13 @@ export default {
 .list
 {
 	margin-left: 10px;
+}
+
+.param
+{
+	white-space: nowrap;
+	width: 600px; 
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 </style>
