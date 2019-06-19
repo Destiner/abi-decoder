@@ -70,7 +70,7 @@ export default {
 <style scoped>
 .list
 {
-	margin-left: 10px;
+	margin-left: 8px;
 }
 
 .param
