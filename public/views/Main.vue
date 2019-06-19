@@ -5,7 +5,7 @@
 		</div>
 		<div class="decoded">
 			<div>{{ name }}</div>
-			<param-list class="decoded" :params="params" />
+			<param-list class="decoded" :params="params" :inputs="inputs" />
 		</div>
 	</div>
 </template>
@@ -26,6 +26,7 @@ export default {
 			data: '',
 			name: '',
 			params: [],
+			inputs: [],
 		}
 	},
 	watch: {
@@ -153,8 +154,8 @@ export default {
 			const data = `0x${this.data.slice(10, this.data.length)}`;
 			const inputStringStart = signature.indexOf('(') + 1;
 			const inputString = signature.slice(inputStringStart, -1);
-			const inputs = this.getInputs(inputString);
-			const decodedParams = abiCoder.decode(inputs, data);
+			this.inputs = this.getInputs(inputString);
+			const decodedParams = abiCoder.decode(this.inputs, data);
 			return decodedParams;
 		},
 	},
