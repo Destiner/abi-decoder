@@ -52,7 +52,7 @@ body
 
 #center
 {
-	flex: 2;
+	flex: 3;
 }
 
 #footer

@@ -76,7 +76,7 @@ export default {
 .param
 {
 	white-space: nowrap;
-	max-width: 600px; 
+	max-width: 800px; 
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
