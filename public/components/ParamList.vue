@@ -86,7 +86,6 @@ export default {
 	font-size: 12px;
 	font-style: italic;
 	color: gray;
-
 }
 
 .param-name
