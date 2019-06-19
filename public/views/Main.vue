@@ -172,7 +172,7 @@ input
 	font-size: 18px;
 	border: 0;
 	border-bottom: 1px solid black;
-	min-width: 400px;
+	min-width: 500px;
 }
 
 input.error
