@@ -127,7 +127,7 @@ export default {
 			const hash = data.slice(2, 10);
 			let signature;
 			// Query local signatures
-			signature = signatures[hash];
+			signature = signatures[hash][0].signature;
 			if (signature) {
 				return signature;
 			}
