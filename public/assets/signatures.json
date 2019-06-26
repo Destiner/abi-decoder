@@ -42,6 +42,10 @@
 		"signature": "getAssetProxy(bytes4 assetProxyId)",
 		"source": "0x"
 	}],
+	"66188463": [{
+		"signature": "decreaseApproval(address _spender,uint256 _subtractedValue)",
+		"source": "bzx"
+	}],
 	"69794795": [{
 		"signature": "getRiskParams()",
 		"source": "dydx"
@@ -73,13 +77,13 @@
 		"source": "bancor"
 	}, {
 		"signature": "owner()",
+		"source": "bzx"
+	}, {
+		"signature": "owner()",
 		"source": "ddex"
 	}, {
 		"signature": "owner()",
 		"source": "dydx"
-	}, {
-		"signature": "owner()",
-		"source": "fulcrum"
 	}, {
 		"signature": "owner()",
 		"source": "idex"
@@ -107,14 +111,14 @@
 		"signature": "transferOwnership(address _newOwner)",
 		"source": "bancor"
 	}, {
+		"signature": "transferOwnership(address _newOwner)",
+		"source": "bzx"
+	}, {
 		"signature": "transferOwnership(address newOwner)",
 		"source": "ddex"
 	}, {
 		"signature": "transferOwnership(address newOwner)",
 		"source": "dydx"
-	}, {
-		"signature": "transferOwnership(address _newOwner)",
-		"source": "fulcrum"
 	}, {
 		"signature": "transferOwnership(address _newOwner)",
 		"source": "tokenstore"
@@ -452,7 +456,14 @@
 		"signature": "token()",
 		"source": "bancor"
 	}],
+	"06b3efd6": [{
+		"signature": "assetBalanceOf(address _owner)",
+		"source": "bzx"
+	}],
 	"06fdde03": [{
+		"signature": "name()",
+		"source": "bzx"
+	}, {
 		"signature": "name()",
 		"source": "compound"
 	}, {
@@ -460,15 +471,19 @@
 		"source": "cryptokitties"
 	}, {
 		"signature": "name()",
-		"source": "fulcrum"
-	}, {
-		"signature": "name()",
 		"source": "uniswap"
 	}, {
 		"signature": "name()",
 		"source": "weth"
 	}],
+	"087fc48b": [{
+		"signature": "claimLoanToken()",
+		"source": "bzx"
+	}],
 	"095ea7b3": [{
+		"signature": "approve(address _spender,uint256 _value)",
+		"source": "bzx"
+	}, {
 		"signature": "approve(address spender,uint256 amount)",
 		"source": "compound"
 	}, {
@@ -487,19 +502,26 @@
 		"signature": "approve(address guy,uint256 wad)",
 		"source": "weth"
 	}],
-	"0e752702": [{
-		"signature": "repayBorrow(uint256 repayAmount)",
-		"source": "compound"
+	"09ec6b6b": [{
+		"signature": "supplyInterestRate()",
+		"source": "bzx"
 	}],
-	"173b9904": [{
-		"signature": "reserveFactorMantissa()",
-		"source": "compound"
+	"0c4925fd": [{
+		"signature": "burntTokenReserved()",
+		"source": "bzx"
 	}],
-	"17bfdfbc": [{
-		"signature": "borrowBalanceCurrent(address account)",
-		"source": "compound"
+	"1319b880": [{
+		"signature": "borrowToken(uint256 borrowAmount,uint256 leverageAmount,address collateralTokenAddress,address tradeTokenToFillAddress,bool withdrawOnOpen)",
+		"source": "bzx"
+	}],
+	"14be4ecc": [{
+		"signature": "setWETHContract(address _addr)",
+		"source": "bzx"
 	}],
 	"18160ddd": [{
+		"signature": "totalSupply()",
+		"source": "bzx"
+	}, {
 		"signature": "totalSupply()",
 		"source": "compound"
 	}, {
@@ -510,19 +532,31 @@
 		"source": "erc20"
 	}, {
 		"signature": "totalSupply()",
-		"source": "fulcrum"
-	}, {
-		"signature": "totalSupply()",
 		"source": "uniswap"
 	}, {
 		"signature": "totalSupply()",
 		"source": "weth"
 	}],
-	"182df0f5": [{
-		"signature": "exchangeRateStored()",
-		"source": "compound"
+	"191e2fc7": [{
+		"signature": "setTokenizedRegistry(address _addr)",
+		"source": "bzx"
+	}],
+	"1d0806ae": [{
+		"signature": "initialPrice()",
+		"source": "bzx"
+	}],
+	"1f68f20a": [{
+		"signature": "baseRate()",
+		"source": "bzx"
+	}],
+	"20f6d07c": [{
+		"signature": "totalAssetBorrow()",
+		"source": "bzx"
 	}],
 	"23b872dd": [{
+		"signature": "transferFrom(address _from,address _to,uint256 _value)",
+		"source": "bzx"
+	}, {
 		"signature": "transferFrom(address src,address dst,uint256 amount)",
 		"source": "compound"
 	}, {
@@ -541,22 +575,291 @@
 		"signature": "transferFrom(address src,address dst,uint256 wad)",
 		"source": "weth"
 	}],
-	"2608f818": [{
-		"signature": "repayBorrowBehalf(address borrower,uint256 repayAmount)",
-		"source": "compound"
+	"247bbed7": [{
+		"signature": "borrowTokenFromEscrow(uint256 escrowAmount,uint256 leverageAmount,address tradeTokenToFillAddress,bool withdrawOnOpen)",
+		"source": "bzx"
+	}],
+	"2515aacd": [{
+		"signature": "loanOrderData(bytes32)",
+		"source": "bzx"
+	}],
+	"28ca651f": [{
+		"signature": "initLeverage(uint256[4] orderParams)",
+		"source": "bzx"
+	}],
+	"2c9e1885": [{
+		"signature": "setBZxVault(address _addr)",
+		"source": "bzx"
+	}],
+	"2ecae90a": [{
+		"signature": "getLeverageList()",
+		"source": "bzx"
 	}],
 	"313ce567": [{
 		"signature": "decimals()",
-		"source": "compound"
+		"source": "bzx"
 	}, {
 		"signature": "decimals()",
-		"source": "fulcrum"
+		"source": "compound"
 	}, {
 		"signature": "decimals()",
 		"source": "uniswap"
 	}, {
 		"signature": "decimals()",
 		"source": "weth"
+	}],
+	"32a9a43b": [{
+		"signature": "removeLeverage(uint256 leverageAmount)",
+		"source": "bzx"
+	}],
+	"330691ac": [{
+		"signature": "rateMultiplier()",
+		"source": "bzx"
+	}],
+	"3660bef0": [{
+		"signature": "setDemandCurve(uint256 _baseRate,uint256 _rateMultiplier)",
+		"source": "bzx"
+	}],
+	"40c10f19": [{
+		"signature": "mint(address receiver,uint256 depositAmount)",
+		"source": "bzx"
+	}],
+	"4780eac1": [{
+		"signature": "wethContract()",
+		"source": "bzx"
+	}],
+	"59e239af": [{
+		"signature": "donateAsset(address tokenAddress)",
+		"source": "bzx"
+	}],
+	"5f561763": [{
+		"signature": "rolloverPosition(address borrower,uint256 leverageAmount,uint256 escrowAmount,address tradeTokenToFillAddress)",
+		"source": "bzx"
+	}],
+	"612ef80b": [{
+		"signature": "marketLiquidity()",
+		"source": "bzx"
+	}],
+	"622fe39f": [{
+		"signature": "getLoanData(uint256 levergeAmount)",
+		"source": "bzx"
+	}],
+	"674d13c8": [{
+		"signature": "totalReservedSupply()",
+		"source": "bzx"
+	}],
+	"6dfd3c5a": [{
+		"signature": "interestReceived()",
+		"source": "bzx"
+	}],
+	"6f1296d2": [{
+		"signature": "wrapEther()",
+		"source": "bzx"
+	}],
+	"70a08231": [{
+		"signature": "balanceOf(address _owner)",
+		"source": "bzx"
+	}, {
+		"signature": "balanceOf(address owner)",
+		"source": "compound"
+	}, {
+		"signature": "balanceOf(address _owner)",
+		"source": "cryptokitties"
+	}, {
+		"signature": "balanceOf(address account)",
+		"source": "erc20"
+	}, {
+		"signature": "balanceOf(address owner)",
+		"source": "erc721"
+	}, {
+		"signature": "balanceOf(address _owner)",
+		"source": "uniswap"
+	}, {
+		"signature": "balanceOf(address)",
+		"source": "weth"
+	}],
+	"736ee3d3": [{
+		"signature": "tokenizedRegistry()",
+		"source": "bzx"
+	}],
+	"7866c6c1": [{
+		"signature": "burntTokenReserveList(uint256)",
+		"source": "bzx"
+	}],
+	"797bf385": [{
+		"signature": "loanTokenAddress()",
+		"source": "bzx"
+	}],
+	"7ff9b596": [{
+		"signature": "tokenPrice()",
+		"source": "bzx"
+	}],
+	"81a6b250": [{
+		"signature": "burnToEther(address receiver,uint256 burnAmount)",
+		"source": "bzx"
+	}],
+	"829b38f4": [{
+		"signature": "getMaxEscrowAmount(uint256 leverageAmount)",
+		"source": "bzx"
+	}],
+	"8325a1c0": [{
+		"signature": "borrowInterestRate()",
+		"source": "bzx"
+	}],
+	"894ca308": [{
+		"signature": "bZxVault()",
+		"source": "bzx"
+	}],
+	"8b9ce419": [{
+		"signature": "getBorrowAmount(uint256 escrowAmount,uint256 leverageAmount,bool withdrawOnOpen)",
+		"source": "bzx"
+	}],
+	"8c9f7074": [{
+		"signature": "setInterestFeePercent(uint256 _newRate)",
+		"source": "bzx"
+	}],
+	"8f6ede1f": [{
+		"signature": "mintWithEther(address receiver)",
+		"source": "bzx"
+	}],
+	"8fb807c5": [{
+		"signature": "totalAssetSupply()",
+		"source": "bzx"
+	}],
+	"95d89b41": [{
+		"signature": "symbol()",
+		"source": "bzx"
+	}, {
+		"signature": "symbol()",
+		"source": "compound"
+	}, {
+		"signature": "symbol()",
+		"source": "cryptokitties"
+	}, {
+		"signature": "symbol()",
+		"source": "uniswap"
+	}, {
+		"signature": "symbol()",
+		"source": "weth"
+	}],
+	"96c7871b": [{
+		"signature": "bZxOracle()",
+		"source": "bzx"
+	}],
+	"995363d3": [{
+		"signature": "bZxContract()",
+		"source": "bzx"
+	}],
+	"9b3a54d1": [{
+		"signature": "leverageList(uint256)",
+		"source": "bzx"
+	}],
+	"9dc29fac": [{
+		"signature": "burn(address receiver,uint256 burnAmount)",
+		"source": "bzx"
+	}],
+	"9f4ba0ee": [{
+		"signature": "setInitialPrice(uint256 _value)",
+		"source": "bzx"
+	}],
+	"a0807404": [{
+		"signature": "setBZxOracle(address _addr)",
+		"source": "bzx"
+	}],
+	"a9059cbb": [{
+		"signature": "transfer(address _to,uint256 _value)",
+		"source": "bzx"
+	}, {
+		"signature": "transfer(address dst,uint256 amount)",
+		"source": "compound"
+	}, {
+		"signature": "transfer(address _to,uint256 _tokenId)",
+		"source": "cryptokitties"
+	}, {
+		"signature": "transfer(address recipient,uint256 amount)",
+		"source": "erc20"
+	}, {
+		"signature": "transfer(address _to,uint256 _value)",
+		"source": "uniswap"
+	}, {
+		"signature": "transfer(address dst,uint256 wad)",
+		"source": "weth"
+	}],
+	"ac9fd2b8": [{
+		"signature": "nextLoanInterestRate(uint256 borrowAmount)",
+		"source": "bzx"
+	}],
+	"cd4fa66d": [{
+		"signature": "closeLoanNotifier((address loanTokenAddress,address interestTokenAddress,address collateralTokenAddress,address oracleAddress,uint256 loanTokenAmount,uint256 interestAmount,uint256 initialMarginAmount,uint256 maintenanceMarginAmount,uint256 maxDurationUnixTimestampSec,bytes32 loanOrderHash) loanOrder,(address trader,address collateralTokenAddressFilled,address positionTokenAddressFilled,uint256 loanTokenAmountFilled,uint256 loanTokenAmountUsed,uint256 collateralTokenAmountFilled,uint256 positionTokenAmountFilled,uint256 loanStartUnixTimestampSec,uint256 loanEndUnixTimestampSec,bool active,uint256 positionId) loanPosition,address loanCloser,uint256 closeAmount,bool)",
+		"source": "bzx"
+	}],
+	"d73dd623": [{
+		"signature": "increaseApproval(address _spender,uint256 _addedValue)",
+		"source": "bzx"
+	}],
+	"d84d2a47": [{
+		"signature": "spreadMultiplier()",
+		"source": "bzx"
+	}],
+	"dd62ed3e": [{
+		"signature": "allowance(address _owner,address _spender)",
+		"source": "bzx"
+	}, {
+		"signature": "allowance(address owner,address spender)",
+		"source": "compound"
+	}, {
+		"signature": "allowance(address owner,address spender)",
+		"source": "erc20"
+	}, {
+		"signature": "allowance(address _owner,address _spender)",
+		"source": "uniswap"
+	}, {
+		"signature": "allowance(address,address)",
+		"source": "weth"
+	}],
+	"e54280e7": [{
+		"signature": "setBZxContract(address _addr)",
+		"source": "bzx"
+	}],
+	"eebc5081": [{
+		"signature": "checkpointPrice(address _user)",
+		"source": "bzx"
+	}],
+	"ef090e4c": [{
+		"signature": "initialize(address _bZxContract,address _bZxVault,address _bZxOracle,address _wethContract,address _loanTokenAddress,address _tokenizedRegistry,string _name,string _symbol)",
+		"source": "bzx"
+	}],
+	"fbd9574d": [{
+		"signature": "burntTokenReserveListIndex(address)",
+		"source": "bzx"
+	}],
+	"fe056342": [{
+		"signature": "loanOrderHashes(uint256)",
+		"source": "bzx"
+	}],
+	"ffda0a37": [{
+		"signature": "settleInterest()",
+		"source": "bzx"
+	}],
+	"0e752702": [{
+		"signature": "repayBorrow(uint256 repayAmount)",
+		"source": "compound"
+	}],
+	"173b9904": [{
+		"signature": "reserveFactorMantissa()",
+		"source": "compound"
+	}],
+	"17bfdfbc": [{
+		"signature": "borrowBalanceCurrent(address account)",
+		"source": "compound"
+	}],
+	"182df0f5": [{
+		"signature": "exchangeRateStored()",
+		"source": "compound"
+	}],
+	"2608f818": [{
+		"signature": "repayBorrowBehalf(address borrower,uint256 repayAmount)",
+		"source": "compound"
 	}],
 	"3af9e669": [{
 		"signature": "balanceOfUnderlying(address owner)",
@@ -594,28 +897,6 @@
 		"signature": "underlying()",
 		"source": "compound"
 	}],
-	"70a08231": [{
-		"signature": "balanceOf(address owner)",
-		"source": "compound"
-	}, {
-		"signature": "balanceOf(address _owner)",
-		"source": "cryptokitties"
-	}, {
-		"signature": "balanceOf(address account)",
-		"source": "erc20"
-	}, {
-		"signature": "balanceOf(address owner)",
-		"source": "erc721"
-	}, {
-		"signature": "balanceOf(address _owner)",
-		"source": "fulcrum"
-	}, {
-		"signature": "balanceOf(address _owner)",
-		"source": "uniswap"
-	}, {
-		"signature": "balanceOf(address)",
-		"source": "weth"
-	}],
 	"73acee98": [{
 		"signature": "totalBorrowsCurrent()",
 		"source": "compound"
@@ -628,22 +909,6 @@
 		"signature": "totalReserves()",
 		"source": "compound"
 	}],
-	"95d89b41": [{
-		"signature": "symbol()",
-		"source": "compound"
-	}, {
-		"signature": "symbol()",
-		"source": "cryptokitties"
-	}, {
-		"signature": "symbol()",
-		"source": "fulcrum"
-	}, {
-		"signature": "symbol()",
-		"source": "uniswap"
-	}, {
-		"signature": "symbol()",
-		"source": "weth"
-	}],
 	"95dd9193": [{
 		"signature": "borrowBalanceStored(address account)",
 		"source": "compound"
@@ -655,22 +920,6 @@
 	"a6afed95": [{
 		"signature": "accrueInterest()",
 		"source": "compound"
-	}],
-	"a9059cbb": [{
-		"signature": "transfer(address dst,uint256 amount)",
-		"source": "compound"
-	}, {
-		"signature": "transfer(address _to,uint256 _tokenId)",
-		"source": "cryptokitties"
-	}, {
-		"signature": "transfer(address recipient,uint256 amount)",
-		"source": "erc20"
-	}, {
-		"signature": "transfer(address _to,uint256 _value)",
-		"source": "uniswap"
-	}, {
-		"signature": "transfer(address dst,uint256 wad)",
-		"source": "weth"
 	}],
 	"aa5af0fd": [{
 		"signature": "borrowIndex()",
@@ -703,22 +952,6 @@
 	"db006a75": [{
 		"signature": "redeem(uint256 redeemTokens)",
 		"source": "compound"
-	}],
-	"dd62ed3e": [{
-		"signature": "allowance(address owner,address spender)",
-		"source": "compound"
-	}, {
-		"signature": "allowance(address owner,address spender)",
-		"source": "erc20"
-	}, {
-		"signature": "allowance(address _owner,address _spender)",
-		"source": "fulcrum"
-	}, {
-		"signature": "allowance(address _owner,address _spender)",
-		"source": "uniswap"
-	}, {
-		"signature": "allowance(address,address)",
-		"source": "weth"
 	}],
 	"e9c714f2": [{
 		"signature": "_acceptAdmin()",
@@ -1406,78 +1639,6 @@
 	}, {
 		"signature": "availableVolume(address _tokenGet,uint256 _amountGet,address _tokenGive,uint256 _amountGive,uint256 _expires,uint256 _nonce,address _user,uint8 _v,bytes32 _r,bytes32 _s)",
 		"source": "tokenstore"
-	}],
-	"0c4925fd": [{
-		"signature": "burntTokenReserved()",
-		"source": "fulcrum"
-	}],
-	"1d0806ae": [{
-		"signature": "initialPrice()",
-		"source": "fulcrum"
-	}],
-	"1f68f20a": [{
-		"signature": "baseRate()",
-		"source": "fulcrum"
-	}],
-	"20f6d07c": [{
-		"signature": "totalAssetBorrow()",
-		"source": "fulcrum"
-	}],
-	"2515aacd": [{
-		"signature": "loanOrderData(bytes32)",
-		"source": "fulcrum"
-	}],
-	"330691ac": [{
-		"signature": "rateMultiplier()",
-		"source": "fulcrum"
-	}],
-	"4780eac1": [{
-		"signature": "wethContract()",
-		"source": "fulcrum"
-	}],
-	"736ee3d3": [{
-		"signature": "tokenizedRegistry()",
-		"source": "fulcrum"
-	}],
-	"776d1a01": [{
-		"signature": "setTarget(address _newTarget)",
-		"source": "fulcrum"
-	}],
-	"7866c6c1": [{
-		"signature": "burntTokenReserveList(uint256)",
-		"source": "fulcrum"
-	}],
-	"797bf385": [{
-		"signature": "loanTokenAddress()",
-		"source": "fulcrum"
-	}],
-	"894ca308": [{
-		"signature": "bZxVault()",
-		"source": "fulcrum"
-	}],
-	"96c7871b": [{
-		"signature": "bZxOracle()",
-		"source": "fulcrum"
-	}],
-	"995363d3": [{
-		"signature": "bZxContract()",
-		"source": "fulcrum"
-	}],
-	"9b3a54d1": [{
-		"signature": "leverageList(uint256)",
-		"source": "fulcrum"
-	}],
-	"d84d2a47": [{
-		"signature": "spreadMultiplier()",
-		"source": "fulcrum"
-	}],
-	"fbd9574d": [{
-		"signature": "burntTokenReserveListIndex(address)",
-		"source": "fulcrum"
-	}],
-	"fe056342": [{
-		"signature": "loanOrderHashes(uint256)",
-		"source": "fulcrum"
 	}],
 	"0674763c": [{
 		"signature": "assert(bool assertion)",
