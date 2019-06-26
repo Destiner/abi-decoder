@@ -24,7 +24,8 @@ export default {
 			return Array.isArray(param);
 		},
 		getInputs(key) {
-			if (this.inputs.type == 'tuple[]') {
+			const type = this.inputs.type;
+			if (type == 'tuple' || type == 'tuple[]') {
 				return this.inputs.components;
 			}
 			const keyIndex = this.keys.indexOf(key);
