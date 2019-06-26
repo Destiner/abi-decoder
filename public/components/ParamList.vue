@@ -2,7 +2,7 @@
 	<div class="list">
 		<div v-for="key in keys">
 			<div class="param">
-				<span class="param-type">{{ getType(key) }}</span>
+				<div class="param-type">{{ getType(key) }}</div>
 				<span class="param-name">{{ key }}: </span>
 				<span v-if="isNested(params[key])">
 					<param-list :params="params[key]" :inputs="getInputs(key)"/>
@@ -83,9 +83,11 @@ export default {
 
 .param-type
 {
+	min-width: 50px;
 	font-size: 12px;
 	font-style: italic;
 	color: gray;
+	display: inline-block;
 }
 
 .param-name
