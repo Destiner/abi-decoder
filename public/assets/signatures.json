@@ -54,6 +54,71 @@
 		"signature": "isValidSignature(bytes32 hash,address signerAddress,bytes signature)",
 		"source": "0x"
 	}],
+	"18978e82": [{
+		"signature": "marketBuyOrdersWithEth((address makerAddress,address takerAddress,address feeRecipientAddress,address senderAddress,uint256 makerAssetAmount,uint256 takerAssetAmount,uint256 makerFee,uint256 takerFee,uint256 expirationTimeSeconds,uint256 salt,bytes makerAssetData,bytes takerAssetData)[] orders,uint256 makerAssetFillAmount,bytes[] signatures,(address makerAddress,address takerAddress,address feeRecipientAddress,address senderAddress,uint256 makerAssetAmount,uint256 takerAssetAmount,uint256 makerFee,uint256 takerFee,uint256 expirationTimeSeconds,uint256 salt,bytes makerAssetData,bytes takerAssetData)[] feeOrders,bytes[] feeSignatures,uint256 feePercentage,address feeRecipient)",
+		"source": "0x-instant"
+	}],
+	"630f1e6c": [{
+		"signature": "withdrawAsset(bytes assetData,uint256 amount)",
+		"source": "0x-instant"
+	}],
+	"8da5cb5b": [{
+		"signature": "owner()",
+		"source": "0x-instant"
+	}, {
+		"signature": "owner()",
+		"source": "0x"
+	}, {
+		"signature": "owner()",
+		"source": "bancor"
+	}, {
+		"signature": "owner()",
+		"source": "ddex"
+	}, {
+		"signature": "owner()",
+		"source": "dydx"
+	}, {
+		"signature": "owner()",
+		"source": "fulcrum"
+	}, {
+		"signature": "owner()",
+		"source": "idex"
+	}, {
+		"signature": "owner()",
+		"source": "makerdao"
+	}, {
+		"signature": "owner()",
+		"source": "oasis"
+	}, {
+		"signature": "owner()",
+		"source": "tokenstore"
+	}],
+	"9395525c": [{
+		"signature": "marketSellOrdersWithEth((address makerAddress,address takerAddress,address feeRecipientAddress,address senderAddress,uint256 makerAssetAmount,uint256 takerAssetAmount,uint256 makerFee,uint256 takerFee,uint256 expirationTimeSeconds,uint256 salt,bytes makerAssetData,bytes takerAssetData)[] orders,bytes[] signatures,(address makerAddress,address takerAddress,address feeRecipientAddress,address senderAddress,uint256 makerAssetAmount,uint256 takerAssetAmount,uint256 makerFee,uint256 takerFee,uint256 expirationTimeSeconds,uint256 salt,bytes makerAssetData,bytes takerAssetData)[] feeOrders,bytes[] feeSignatures,uint256 feePercentage,address feeRecipient)",
+		"source": "0x-instant"
+	}],
+	"f2fde38b": [{
+		"signature": "transferOwnership(address newOwner)",
+		"source": "0x-instant"
+	}, {
+		"signature": "transferOwnership(address newOwner)",
+		"source": "0x"
+	}, {
+		"signature": "transferOwnership(address _newOwner)",
+		"source": "bancor"
+	}, {
+		"signature": "transferOwnership(address newOwner)",
+		"source": "ddex"
+	}, {
+		"signature": "transferOwnership(address newOwner)",
+		"source": "dydx"
+	}, {
+		"signature": "transferOwnership(address _newOwner)",
+		"source": "fulcrum"
+	}, {
+		"signature": "transferOwnership(address _newOwner)",
+		"source": "tokenstore"
+	}],
 	"288cdc91": [{
 		"signature": "filled(bytes32)",
 		"source": "0x"
@@ -132,34 +197,6 @@
 		"signature": "preSigned(bytes32,address)",
 		"source": "0x"
 	}],
-	"8da5cb5b": [{
-		"signature": "owner()",
-		"source": "0x"
-	}, {
-		"signature": "owner()",
-		"source": "bancor"
-	}, {
-		"signature": "owner()",
-		"source": "ddex"
-	}, {
-		"signature": "owner()",
-		"source": "dydx"
-	}, {
-		"signature": "owner()",
-		"source": "fulcrum"
-	}, {
-		"signature": "owner()",
-		"source": "idex"
-	}, {
-		"signature": "owner()",
-		"source": "makerdao"
-	}, {
-		"signature": "owner()",
-		"source": "oasis"
-	}, {
-		"signature": "owner()",
-		"source": "tokenstore"
-	}],
 	"a3e20380": [{
 		"signature": "marketBuyOrdersNoThrow((address makerAddress,address takerAddress,address feeRecipientAddress,address senderAddress,uint256 makerAssetAmount,uint256 takerAssetAmount,uint256 makerFee,uint256 takerFee,uint256 expirationTimeSeconds,uint256 salt,bytes makerAssetData,bytes takerAssetData)[] orders,uint256 makerAssetFillAmount,bytes[] signatures)",
 		"source": "0x"
@@ -207,25 +244,6 @@
 	"eea086ba": [{
 		"signature": "currentContextAddress()",
 		"source": "0x"
-	}],
-	"f2fde38b": [{
-		"signature": "transferOwnership(address newOwner)",
-		"source": "0x"
-	}, {
-		"signature": "transferOwnership(address _newOwner)",
-		"source": "bancor"
-	}, {
-		"signature": "transferOwnership(address newOwner)",
-		"source": "ddex"
-	}, {
-		"signature": "transferOwnership(address newOwner)",
-		"source": "dydx"
-	}, {
-		"signature": "transferOwnership(address _newOwner)",
-		"source": "fulcrum"
-	}, {
-		"signature": "transferOwnership(address _newOwner)",
-		"source": "tokenstore"
 	}],
 	"ffa1ad74": [{
 		"signature": "VERSION()",
