@@ -125,11 +125,9 @@ export default {
 				return '';
 			}
 			const hash = data.slice(2, 10);
-			let signature;
 			// Query local signatures
-			signature = signatures[hash][0].signature;
-			if (signature) {
-				return signature;
+			if (hash in signatures) {
+				return signatures[hash][0].signature;
 			}
 			// Fallback: query 4byte
 			const url = `https://www.4byte.directory/api/v1/signatures/?hex_signature=0x${hash}`;
@@ -141,8 +139,7 @@ export default {
 				return;
 			}
 			// Show function name
-			signature = json.results[0].text_signature;
-			return signature;
+			return json.results[0].text_signature;
 		},
 		getName(signature) {
 			const end = signature.indexOf('(');
