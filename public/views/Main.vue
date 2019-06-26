@@ -45,76 +45,78 @@ export default {
 	},
 	methods: {
 		getInputs(inputString) {
-			let simpleInputStartIndex = 0;
-			const startIndices = [];
-			const inputs = [];
+			const indexStack = [];
+			const tokenStack = [];
+			let index = 0;
+			let innerInputs = [];
 			for (let i = 0; i < inputString.length; i++) {
 				const char = inputString.charAt(i);
-				if (char == '(') {
-					if (startIndices.length == 0 && i != 0) {
-						const simpleInputString = inputString.slice(simpleInputStartIndex, i - 1);
-						const simpleInputs = this.getSimpleInputs(simpleInputString);
-						for (const simpleInput of simpleInputs) {
-							inputs.push(simpleInput);
-						}
+				switch (char) {
+					case '(': {
+						// acc
+						const tokens = [];
+						tokenStack.push(tokens);
+						index = i + 1;
+						break;
 					}
-					startIndices.push(i);
-				}
-				if (char == ')') {
-					const start = startIndices.pop() + 1;
-					const innerInputString = inputString.slice(start, i);
-					const innerInputs = this.getInputs(innerInputString);
-					let tupleTypeEndIndex;
-					let input = {};
-					if (inputString.charAt(i + 1) == '[' && inputString.charAt(i + 2) == ']') {
-						// Tuple array
-						input = {
-							type: 'tuple[]',
-							components: innerInputs,
-						};
-						tupleTypeEndIndex = i + 2;
-					} else {
-						// Tuple
-						input = {
-							type: 'tuple',
-							components: innerInputs,
-						};
-						tupleTypeEndIndex = i;
+					case ')': {
+						// fold
+						const tokens = tokenStack.pop();
+						const input = this.getInput(innerInputs, inputString, index, i);
+						tokens.push(input);
+						index = i + 1;
+						innerInputs = tokens;
+						break;
 					}
-					simpleInputStartIndex = inputString.indexOf(',', tupleTypeEndIndex) + 1;
-					if (simpleInputStartIndex > tupleTypeEndIndex + 2) {
-						// Tuple name
-						const tupleName = inputString.slice(tupleTypeEndIndex + 2, simpleInputStartIndex - 1);
-						if (tupleName) {
-							input.name = tupleName;
-						}
+					case ',': {
+						// token
+						const tokens = tokenStack.length == 0
+							? []
+							: tokenStack.pop();
+						const input = this.getInput(innerInputs, inputString, index, i);
+						innerInputs = [];
+						tokens.push(input);
+						tokenStack.push(tokens);
+						index = i + 1;
+						break;
 					}
-					inputs.push(input);
 				}
 			}
-			const simpleInputString = inputString.slice(simpleInputStartIndex);
-			const simpleInputs = this.getSimpleInputs(simpleInputString);
-			for (const simpleInput of simpleInputs) {
-				inputs.push(simpleInput);
-			}
+			// token
+			const tokens = tokenStack.length == 0
+				? []
+				: tokenStack.pop();
+			const input = this.getInput(innerInputs, inputString, index);
+			tokens.push(input);
+			tokenStack.push(tokens);
+			const inputs = tokenStack.pop();
 			return inputs;
 		},
-		getSimpleInputs(inputString) {
-			const inputStrings = inputString.split(',');
-			const inputs = [];
-			for (const inputString of inputStrings) {
-				const inputData = inputString.split(' ');
-				const type  = inputData[0];
-				const name = inputData[1];
+		getInput(innerInputs, fullInputString, start, end) {
+			const inputString = fullInputString.slice(start, end);
+			if (innerInputs.length == 0) {
+				// Simple input
+				const tokens = inputString.split(' ');
+				const type = tokens[0];
+				const name = tokens[1];
 				const input = {
 					type,
-				};
-				if (name) {
-					input.name = name;
+					name,
 				}
-				inputs.push(input);
+				return input;
+			} else {
+				// Tuple input
+				const tokens = inputString.split(' ');
+				const input = {};
+				if (tokens.length == 2) {
+					input.name = tokens[1];
+				}
+				input.type = tokens[0] == ''
+					? 'tuple'
+					: 'tuple[]';
+				input.components = innerInputs;
+				return input;
 			}
-			return inputs;
 		},
 		clear() {
 			this.name = '';
