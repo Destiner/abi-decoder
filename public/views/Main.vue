@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<div id="data">
-			<input placeholder="Enter tx data (0x…)" v-model="data" :class="{ error: badInput }">
+			<input placeholder="Enter tx data (0x…)" v-model="data" :class="{ error: error }">
+			<div id="error-name" v-if="error">{{ error }}</div>
 		</div>
 		<div class="decoded">
 			<div>{{ name }}</div>
@@ -24,6 +25,7 @@ export default {
 	data() {
 		return {
 			data: '',
+			error: '',
 			name: '',
 			params: [],
 			inputs: [],
@@ -32,15 +34,30 @@ export default {
 	watch: {
 		data: async function (newData) {
 			this.clear();
-			if (this.badInput) {
+			if (newData.length == 0) {
+				this.error = '';
+				return;
+			}
+			if (newData.length < 10) {
+				this.error = 'A signature should be at least 10 chars long';
+				return;
+			}
+			if (!ethers.utils.isHexString(newData)) {
+				this.error = 'Not a valid hex string';
 				return;
 			}
 			const signature = await this.getSignature(newData);
 			if (!signature || signature == '') {
+				this.error = 'Signature not found';
 				return;
 			}
 			this.name = this.getName(signature);
-			this.params = this.getParams(signature);
+			const params = this.getParams(signature);
+			if (!params) {
+				this.error = 'Can\'t decode: insufficient data';
+				return;
+			}
+			this.params = params;
 		},
 	},
 	methods: {
@@ -119,6 +136,7 @@ export default {
 			}
 		},
 		clear() {
+			this.error = '';
 			this.name = '';
 			this.params = [];
 		},
@@ -154,13 +172,12 @@ export default {
 			const inputStringStart = signature.indexOf('(') + 1;
 			const inputString = signature.slice(inputStringStart, -1);
 			this.inputs = this.getInputs(inputString);
-			const decodedParams = abiCoder.decode(this.inputs, data);
-			return decodedParams;
-		},
-	},
-	computed: {
-		badInput() {
-			return this.data.length > 0 && !ethers.utils.isHexString(this.data);
+			try {
+				const decodedParams = abiCoder.decode(this.inputs, data);
+				return decodedParams;
+			} catch(e) {
+				return;
+			}
 		},
 	},
 }
@@ -172,7 +189,7 @@ input
 	font-size: 18px;
 	border: 0;
 	border-bottom: 1px solid black;
-	min-width: 500px;
+	width: 500px;
 }
 
 input.error
@@ -180,10 +197,18 @@ input.error
 	border-bottom: 1px solid red;
 }
 
+#error-name
+{
+	margin-top: 8px;
+	font-size: 0.75em;
+	color: red;
+}
+
 div#data
 {
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .decoded
