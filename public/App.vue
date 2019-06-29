@@ -3,13 +3,13 @@
 		<div id="left">
 		</div>
 		<div id="center">
-			<div id="header">
+			<header>
 				<h1>Online ABI decoder</h1>
-			</div>
+			</header>
 			<router-view id="content"/>
-			<div id="footer">
+			<footer>
 				Made by @DestinerX. MIT.
-			</div>
+			</footer>
 		</div>
 		<div id="right">
 		</div>
@@ -34,6 +34,11 @@ body
 	font-size: 18px;
 }
 
+footer
+{
+	margin-top: 24px;
+}
+
 #content
 {
 	min-height: 78vh;
@@ -53,10 +58,5 @@ body
 #center
 {
 	flex: 3;
-}
-
-#footer
-{
-	margin-top: 24px;
 }
 </style>
