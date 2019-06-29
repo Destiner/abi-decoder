@@ -11,7 +11,7 @@
 			</header>
 			<router-view id="content"/>
 			<footer>
-				Made by @DestinerX. MIT.
+				Made by <a href="https://twitter.com/DestinerX">@DestinerX</a>. MIT-licensed <a href="https://github.com/Destiner/abi-decoder">source code</a>.
 			</footer>
 		</div>
 		<div id="right">
