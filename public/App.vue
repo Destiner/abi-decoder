@@ -5,6 +5,9 @@
 		<div id="center">
 			<header>
 				<h1>Online ABI decoder</h1>
+				<div>
+					Client-side Ethereum transaction decoder. Metadata and tuples (ABIEncoderV2) are supported.
+				</div>
 			</header>
 			<router-view id="content"/>
 			<footer>
@@ -39,9 +42,15 @@ footer
 	margin-top: 24px;
 }
 
+h1
+{
+	margin-bottom: 8px;
+}
+
 #content
 {
-	min-height: 78vh;
+	margin-top: 36px;
+	min-height: 70vh;
 }
 
 #app
