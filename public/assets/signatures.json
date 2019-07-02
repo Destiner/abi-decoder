@@ -14,6 +14,14 @@
 		"signature": "pendingAdmin()",
 		"source": "kyber"
 	}],
+	"30690468": [{
+		"signature": "atleastZero(int256 a)",
+		"source": "dutchx"
+	}],
+	"37775807": [{
+		"signature": "buyerBalances(address,address,uint256,address)",
+		"source": "dutchx"
+	}],
 	"39509351": [{
 		"signature": "increaseAllowance(address spender,uint256 addedValue)",
 		"source": "erc20"
@@ -54,6 +62,10 @@
 		"signature": "setNewAddress(address _v2Address)",
 		"source": "cryptokitties"
 	}],
+	"79666868": [{
+		"signature": "approveOrder_(address[7] addrs,uint256[9] uints,uint8 feeMethod,uint8 side,uint8 saleKind,uint8 howToCall,bytes calldata,bytes replacementPattern,bytes staticExtradata,bool orderbookInclusionDesired)",
+		"source": "open-sea"
+	}],
 	"93634702": [{
 		"signature": "isValidSignature(bytes32 hash,address signerAddress,bytes signature)",
 		"source": "0x"
@@ -89,10 +101,16 @@
 		"source": "idex"
 	}, {
 		"signature": "owner()",
+		"source": "local-ethereum"
+	}, {
+		"signature": "owner()",
 		"source": "makerdao"
 	}, {
 		"signature": "owner()",
 		"source": "oasis"
+	}, {
+		"signature": "owner()",
+		"source": "open-sea"
 	}, {
 		"signature": "owner()",
 		"source": "tokenstore"
@@ -119,6 +137,9 @@
 	}, {
 		"signature": "transferOwnership(address newOwner)",
 		"source": "dydx"
+	}, {
+		"signature": "transferOwnership(address newOwner)",
+		"source": "open-sea"
 	}, {
 		"signature": "transferOwnership(address _newOwner)",
 		"source": "tokenstore"
@@ -253,6 +274,18 @@
 		"signature": "VERSION()",
 		"source": "0x"
 	}],
+	"1d4d691d": [{
+		"signature": "fill(address makerAddress,uint256 makerAmount,address makerToken,address takerAddress,uint256 takerAmount,address takerToken,uint256 expiration,uint256 nonce,uint8 v,bytes32 r,bytes32 s)",
+		"source": "airswap"
+	}],
+	"20158c44": [{
+		"signature": "fills(bytes32)",
+		"source": "airswap"
+	}],
+	"66a26419": [{
+		"signature": "cancel(address makerAddress,uint256 makerAmount,address makerToken,address takerAddress,uint256 takerAmount,address takerToken,uint256 expiration,uint256 nonce,uint8 v,bytes32 r,bytes32 s)",
+		"source": "airswap"
+	}],
 	"0c87355e": [{
 		"signature": "BANCOR_CONVERTER_UPGRADER()",
 		"source": "bancor"
@@ -330,6 +363,9 @@
 		"source": "bancor"
 	}, {
 		"signature": "version()",
+		"source": "open-sea"
+	}, {
+		"signature": "version()",
 		"source": "tokenstore"
 	}],
 	"579cd3ca": [{
@@ -371,6 +407,9 @@
 	"7b103999": [{
 		"signature": "registry()",
 		"source": "bancor"
+	}, {
+		"signature": "registry()",
+		"source": "open-sea"
 	}],
 	"83315b6e": [{
 		"signature": "CONTRACT_FEATURES()",
@@ -469,6 +508,9 @@
 	}, {
 		"signature": "name()",
 		"source": "cryptokitties"
+	}, {
+		"signature": "name()",
+		"source": "open-sea"
 	}, {
 		"signature": "name()",
 		"source": "uniswap"
@@ -1251,6 +1293,9 @@
 	}, {
 		"signature": "renounceOwnership()",
 		"source": "dydx"
+	}, {
+		"signature": "renounceOwnership()",
+		"source": "open-sea"
 	}],
 	"7add89fb": [{
 		"signature": "DISCOUNT_RATE_BASE()",
@@ -1294,6 +1339,269 @@
 	"fa352c00": [{
 		"signature": "revokeDelegate(address delegate)",
 		"source": "ddex"
+	}],
+	"00599e65": [{
+		"signature": "getTokenOrder(address token1,address token2)",
+		"source": "dutchx"
+	}],
+	"02ffc0b0": [{
+		"signature": "getApprovedAddressesOfList(address[] addressesToCheck)",
+		"source": "dutchx"
+	}],
+	"04e80e90": [{
+		"signature": "getMasterCopy()",
+		"source": "dutchx"
+	}],
+	"06d58f2a": [{
+		"signature": "claimAndWithdraw(address sellToken,address buyToken,address user,uint256 auctionIndex,uint256 amount)",
+		"source": "dutchx"
+	}],
+	"0c57cfba": [{
+		"signature": "claimAndWithdrawTokensFromSeveralAuctionsAsBuyer(address[] auctionSellTokens,address[] auctionBuyTokens,uint256[] auctionIndices)",
+		"source": "dutchx"
+	}],
+	"0e7c0f80": [{
+		"signature": "masterCopyCountdown()",
+		"source": "dutchx"
+	}],
+	"1006a41f": [{
+		"signature": "auctionStarts(address,address)",
+		"source": "dutchx"
+	}],
+	"14584a9d": [{
+		"signature": "getAuctionIndex(address token1,address token2)",
+		"source": "dutchx"
+	}],
+	"2cef4dac": [{
+		"signature": "updateMasterCopy()",
+		"source": "dutchx"
+	}],
+	"403fbf54": [{
+		"signature": "initiateEthUsdOracleUpdate(address _ethUSDOracle)",
+		"source": "dutchx"
+	}],
+	"47e7ef24": [{
+		"signature": "deposit(address tokenAddress,uint256 amount)",
+		"source": "dutchx"
+	}],
+	"4bf8e7a2": [{
+		"signature": "getPriceInPastAuction(address token1,address token2,uint256 auctionIndex)",
+		"source": "dutchx"
+	}],
+	"4e30a66c": [{
+		"signature": "safeToAdd(uint256 a,uint256 b)",
+		"source": "dutchx"
+	}],
+	"59f96ae5": [{
+		"signature": "postSellOrder(address sellToken,address buyToken,uint256 auctionIndex,uint256 amount)",
+		"source": "dutchx"
+	}],
+	"5e7f22c2": [{
+		"signature": "postBuyOrder(address sellToken,address buyToken,uint256 auctionIndex,uint256 amount)",
+		"source": "dutchx"
+	}],
+	"5ec2c7bf": [{
+		"signature": "auctioneer()",
+		"source": "dutchx"
+	}],
+	"65054e55": [{
+		"signature": "claimSellerFunds(address sellToken,address buyToken,address user,uint256 auctionIndex)",
+		"source": "dutchx"
+	}],
+	"657a37ad": [{
+		"signature": "depositAndSell(address sellToken,address buyToken,uint256 amount)",
+		"source": "dutchx"
+	}],
+	"65b0d711": [{
+		"signature": "updateApprovalOfToken(address[] token,bool approved)",
+		"source": "dutchx"
+	}],
+	"6d1ea3fa": [{
+		"signature": "approvedTokens(address)",
+		"source": "dutchx"
+	}],
+	"6e6260fa": [{
+		"signature": "thresholdNewTokenPair()",
+		"source": "dutchx"
+	}],
+	"6ea68360": [{
+		"signature": "newMasterCopy()",
+		"source": "dutchx"
+	}],
+	"706eb3ab": [{
+		"signature": "ethUSDOracle()",
+		"source": "dutchx"
+	}],
+	"7420a32f": [{
+		"signature": "getClearingTime(address token1,address token2,uint256 auctionIndex)",
+		"source": "dutchx"
+	}],
+	"771602f7": [{
+		"signature": "add(uint256 a,uint256 b)",
+		"source": "dutchx"
+	}],
+	"7895dd21": [{
+		"signature": "claimTokensFromSeveralAuctionsAsSeller(address[] auctionSellTokens,address[] auctionBuyTokens,uint256[] auctionIndices,address user)",
+		"source": "dutchx"
+	}],
+	"796a8076": [{
+		"signature": "updateAuctioneer(address _auctioneer)",
+		"source": "dutchx"
+	}],
+	"7ae2b5c7": [{
+		"signature": "min(uint256 a,uint256 b)",
+		"source": "dutchx"
+	}],
+	"7bf1a627": [{
+		"signature": "ethToken()",
+		"source": "dutchx"
+	}],
+	"821b98f3": [{
+		"signature": "closeTheoreticalClosedAuction(address sellToken,address buyToken,uint256 auctionIndex)",
+		"source": "dutchx"
+	}],
+	"8261eb1b": [{
+		"signature": "frtToken()",
+		"source": "dutchx"
+	}],
+	"82a57b43": [{
+		"signature": "claimAndWithdrawTokensFromSeveralAuctionsAsSeller(address[] auctionSellTokens,address[] auctionBuyTokens,uint256[] auctionIndices)",
+		"source": "dutchx"
+	}],
+	"9fec8e96": [{
+		"signature": "claimedAmounts(address,address,uint256,address)",
+		"source": "dutchx"
+	}],
+	"a48cef4a": [{
+		"signature": "oracleInterfaceCountdown()",
+		"source": "dutchx"
+	}],
+	"a619486e": [{
+		"signature": "masterCopy()",
+		"source": "dutchx"
+	}],
+	"acb10351": [{
+		"signature": "setupDutchExchange(address _frtToken,address _owlToken,address _auctioneer,address _ethToken,address _ethUSDOracle,uint256 _thresholdNewTokenPair,uint256 _thresholdNewAuction)",
+		"source": "dutchx"
+	}],
+	"b0293850": [{
+		"signature": "claimBuyerFunds(address sellToken,address buyToken,address user,uint256 auctionIndex)",
+		"source": "dutchx"
+	}],
+	"b04c0239": [{
+		"signature": "clearingTimes(address,address,uint256)",
+		"source": "dutchx"
+	}],
+	"b3c2083f": [{
+		"signature": "sellVolumesNext(address,address)",
+		"source": "dutchx"
+	}],
+	"b64c4905": [{
+		"signature": "sellVolumesCurrent(address,address)",
+		"source": "dutchx"
+	}],
+	"b67d77c5": [{
+		"signature": "sub(uint256 a,uint256 b)",
+		"source": "dutchx"
+	}],
+	"b8beafd6": [{
+		"signature": "buyVolumes(address,address)",
+		"source": "dutchx"
+	}],
+	"c1a21bf3": [{
+		"signature": "sellerBalances(address,address,uint256,address)",
+		"source": "dutchx"
+	}],
+	"c23f001f": [{
+		"signature": "balances(address,address)",
+		"source": "dutchx"
+	}],
+	"c6af43f9": [{
+		"signature": "updateThresholdNewAuction(uint256 _thresholdNewAuction)",
+		"source": "dutchx"
+	}],
+	"c8a4ac9c": [{
+		"signature": "mul(uint256 a,uint256 b)",
+		"source": "dutchx"
+	}],
+	"cb10fa76": [{
+		"signature": "safeToMul(uint256 a,uint256 b)",
+		"source": "dutchx"
+	}],
+	"cd04ccfc": [{
+		"signature": "newProposalEthUSDOracle()",
+		"source": "dutchx"
+	}],
+	"cd94a2a4": [{
+		"signature": "owlToken()",
+		"source": "dutchx"
+	}],
+	"d3cc8d1c": [{
+		"signature": "claimTokensFromSeveralAuctionsAsBuyer(address[] auctionSellTokens,address[] auctionBuyTokens,uint256[] auctionIndices,address user)",
+		"source": "dutchx"
+	}],
+	"dae595e5": [{
+		"signature": "getAuctionStart(address token1,address token2)",
+		"source": "dutchx"
+	}],
+	"df6af7d1": [{
+		"signature": "getUnclaimedBuyerFunds(address sellToken,address buyToken,address user,uint256 auctionIndex)",
+		"source": "dutchx"
+	}],
+	"e1c95bb9": [{
+		"signature": "updateThresholdNewTokenPair(uint256 _thresholdNewTokenPair)",
+		"source": "dutchx"
+	}],
+	"e31c71c4": [{
+		"signature": "safeToSub(uint256 a,uint256 b)",
+		"source": "dutchx"
+	}],
+	"e9f8cd70": [{
+		"signature": "addTokenPair(address token1,address token2,uint256 token1Funding,uint256 token2Funding,uint256 initialClosingPriceNum,uint256 initialClosingPriceDen)",
+		"source": "dutchx"
+	}],
+	"ebcc0de1": [{
+		"signature": "closingPrices(address,address,uint256)",
+		"source": "dutchx"
+	}],
+	"edd0b5cb": [{
+		"signature": "getFeeRatio(address user)",
+		"source": "dutchx"
+	}],
+	"ee93114c": [{
+		"signature": "thresholdNewAuction()",
+		"source": "dutchx"
+	}],
+	"f3fef3a3": [{
+		"signature": "withdraw(address tokenAddress,uint256 amount)",
+		"source": "dutchx"
+	}, {
+		"signature": "withdraw(address token,uint256 amount)",
+		"source": "idex"
+	}],
+	"f41d97fc": [{
+		"signature": "getPriceOfTokenInLastAuction(address token)",
+		"source": "dutchx"
+	}],
+	"f4279d1f": [{
+		"signature": "updateEthUSDOracle()",
+		"source": "dutchx"
+	}],
+	"f625ee28": [{
+		"signature": "startMasterCopyCountdown(address _masterCopy)",
+		"source": "dutchx"
+	}],
+	"f79710fd": [{
+		"signature": "extraTokens(address,address,uint256)",
+		"source": "dutchx"
+	}],
+	"fac7abe3": [{
+		"signature": "latestAuctionIndices(address,address)",
+		"source": "dutchx"
+	}],
+	"fdab1b7b": [{
+		"signature": "getCurrentAuctionPrice(address sellToken,address buyToken,uint256 auctionIndex)",
+		"source": "dutchx"
 	}],
 	"042069d6": [{
 		"signature": "ownerSetSpreadPremium(uint256 marketId,(uint256 value) spreadPremium)",
@@ -1466,6 +1774,34 @@
 	"fd47eda6": [{
 		"signature": "getMarketInterestRate(uint256 marketId)",
 		"source": "dydx"
+	}],
+	"0178b8bf": [{
+		"signature": "resolver(bytes32 node)",
+		"source": "ens"
+	}],
+	"02571be3": [{
+		"signature": "owner(bytes32 node)",
+		"source": "ens"
+	}],
+	"06ab5923": [{
+		"signature": "setSubnodeOwner(bytes32 node,bytes32 label,address owner)",
+		"source": "ens"
+	}],
+	"14ab9038": [{
+		"signature": "setTTL(bytes32 node,uint64 ttl)",
+		"source": "ens"
+	}],
+	"16a25cbd": [{
+		"signature": "ttl(bytes32 node)",
+		"source": "ens"
+	}],
+	"1896f70a": [{
+		"signature": "setResolver(bytes32 node,address resolver)",
+		"source": "ens"
+	}],
+	"5b0fc9c3": [{
+		"signature": "setOwner(bytes32 node,address owner)",
+		"source": "ens"
 	}],
 	"a457c2d7": [{
 		"signature": "decreaseAllowance(address spender,uint256 subtractedValue)",
@@ -1648,6 +1984,9 @@
 		"signature": "setOwner(address newOwner)",
 		"source": "idex"
 	}, {
+		"signature": "setOwner(address _newOwner)",
+		"source": "local-ethereum"
+	}, {
 		"signature": "setOwner(address owner_)",
 		"source": "makerdao"
 	}, {
@@ -1712,10 +2051,6 @@
 	}],
 	"f31174ee": [{
 		"signature": "inactivityReleasePeriod()",
-		"source": "idex"
-	}],
-	"f3fef3a3": [{
-		"signature": "withdraw(address token,uint256 amount)",
 		"source": "idex"
 	}],
 	"f7213db6": [{
@@ -1821,6 +2156,86 @@
 	"d4fac45d": [{
 		"signature": "getBalance(address token,address user)",
 		"source": "kyber"
+	}],
+	"05b64993": [{
+		"signature": "setRequestCancellationMinimumTime(uint32 _newRequestCancellationMinimumTime)",
+		"source": "local-ethereum"
+	}],
+	"24943c7d": [{
+		"signature": "resolveDispute(bytes16 _tradeID,address _seller,address _buyer,uint256 _value,uint16 _fee,uint8 _v,bytes32 _r,bytes32 _s,uint8 _buyerPercent)",
+		"source": "local-ethereum"
+	}],
+	"2cc9636c": [{
+		"signature": "buyerCancel(bytes16 _tradeID,address _seller,address _buyer,uint256 _value,uint16 _fee)",
+		"source": "local-ethereum"
+	}],
+	"2d83549c": [{
+		"signature": "escrows(bytes32)",
+		"source": "local-ethereum"
+	}],
+	"35adc0c5": [{
+		"signature": "sellerCancel(bytes16 _tradeID,address _seller,address _buyer,uint256 _value,uint16 _fee)",
+		"source": "local-ethereum"
+	}],
+	"57938b2a": [{
+		"signature": "requestCancellationMinimumTime()",
+		"source": "local-ethereum"
+	}],
+	"5c810f09": [{
+		"signature": "disableSellerCancel(bytes16 _tradeID,address _seller,address _buyer,uint256 _value,uint16 _fee)",
+		"source": "local-ethereum"
+	}],
+	"6548e9bc": [{
+		"signature": "setRelayer(address _newRelayer)",
+		"source": "local-ethereum"
+	}],
+	"6b407837": [{
+		"signature": "sellerRequestCancel(bytes16 _tradeID,address _seller,address _buyer,uint256 _value,uint16 _fee)",
+		"source": "local-ethereum"
+	}],
+	"6cc6cde1": [{
+		"signature": "arbitrator()",
+		"source": "local-ethereum"
+	}],
+	"8406c079": [{
+		"signature": "relayer()",
+		"source": "local-ethereum"
+	}],
+	"8eb4e0ad": [{
+		"signature": "batchRelay(bytes16[] _tradeID,address[] _seller,address[] _buyer,uint256[] _value,uint16[] _fee,uint128[] _maximumGasPrice,uint8[] _v,bytes32[] _r,bytes32[] _s,uint8[] _instructionByte)",
+		"source": "local-ethereum"
+	}],
+	"ad3b1b47": [{
+		"signature": "withdrawFees(address _to,uint256 _amount)",
+		"source": "local-ethereum"
+	}],
+	"b0eefabe": [{
+		"signature": "setArbitrator(address _newArbitrator)",
+		"source": "local-ethereum"
+	}],
+	"da3e3397": [{
+		"signature": "approveToken(address _tokenContract,address _spender,uint256 _value)",
+		"source": "local-ethereum"
+	}],
+	"de5785d5": [{
+		"signature": "feesAvailableForWithdraw()",
+		"source": "local-ethereum"
+	}],
+	"e5994905": [{
+		"signature": "transferTokenFrom(address _tokenContract,address _transferTo,address _transferFrom,uint256 _value)",
+		"source": "local-ethereum"
+	}],
+	"e9600f12": [{
+		"signature": "release(bytes16 _tradeID,address _seller,address _buyer,uint256 _value,uint16 _fee)",
+		"source": "local-ethereum"
+	}],
+	"f1e03d67": [{
+		"signature": "createEscrow(bytes16 _tradeID,address _seller,address _buyer,uint256 _value,uint16 _fee,uint32 _paymentWindowInSeconds,uint32 _expiry,uint8 _v,bytes32 _r,bytes32 _s)",
+		"source": "local-ethereum"
+	}],
+	"f5537ede": [{
+		"signature": "transferToken(address _tokenContract,address _transferTo,uint256 _value)",
+		"source": "local-ethereum"
 	}],
 	"049878f3": [{
 		"signature": "join(uint256 wad)",
@@ -2222,6 +2637,114 @@
 	"ff1fd974": [{
 		"signature": "getPayAmount(address pay_gem,address buy_gem,uint256 buy_amt)",
 		"source": "oasis"
+	}],
+	"0eefdbad": [{
+		"signature": "tokenTransferProxy()",
+		"source": "open-sea"
+	}],
+	"10796a47": [{
+		"signature": "staticCall(address target,bytes calldata,bytes extradata)",
+		"source": "open-sea"
+	}],
+	"14350c24": [{
+		"signature": "changeMinimumMakerProtocolFee(uint256 newMinimumMakerProtocolFee)",
+		"source": "open-sea"
+	}],
+	"1a6b13e2": [{
+		"signature": "changeMinimumTakerProtocolFee(uint256 newMinimumTakerProtocolFee)",
+		"source": "open-sea"
+	}],
+	"239e83df": [{
+		"signature": "guardedArrayReplace(bytes array,bytes desired,bytes mask)",
+		"source": "open-sea"
+	}],
+	"28a8ee68": [{
+		"signature": "minimumTakerProtocolFee()",
+		"source": "open-sea"
+	}],
+	"31e63199": [{
+		"signature": "codename()",
+		"source": "open-sea"
+	}],
+	"3464af6a": [{
+		"signature": "testCopyAddress(address addr)",
+		"source": "open-sea"
+	}],
+	"3e1e292a": [{
+		"signature": "testCopy(bytes arrToCopy)",
+		"source": "open-sea"
+	}],
+	"3f67ee0d": [{
+		"signature": "calculateCurrentPrice_(address[7] addrs,uint256[9] uints,uint8 feeMethod,uint8 side,uint8 saleKind,uint8 howToCall,bytes calldata,bytes replacementPattern,bytes staticExtradata)",
+		"source": "open-sea"
+	}],
+	"514f0330": [{
+		"signature": "changeProtocolFeeRecipient(address newProtocolFeeRecipient)",
+		"source": "open-sea"
+	}],
+	"562b2ebc": [{
+		"signature": "orderCalldataCanMatch(bytes buyCalldata,bytes buyReplacementPattern,bytes sellCalldata,bytes sellReplacementPattern)",
+		"source": "open-sea"
+	}],
+	"60bef33a": [{
+		"signature": "validateOrder_(address[7] addrs,uint256[9] uints,uint8 feeMethod,uint8 side,uint8 saleKind,uint8 howToCall,bytes calldata,bytes replacementPattern,bytes staticExtradata,uint8 v,bytes32 r,bytes32 s)",
+		"source": "open-sea"
+	}],
+	"63d36c0b": [{
+		"signature": "calculateFinalPrice(uint8 side,uint8 saleKind,uint256 basePrice,uint256 extra,uint256 listingTime,uint256 expirationTime)",
+		"source": "open-sea"
+	}],
+	"64df049e": [{
+		"signature": "protocolFeeRecipient()",
+		"source": "open-sea"
+	}],
+	"71d02b38": [{
+		"signature": "hashOrder_(address[7] addrs,uint256[9] uints,uint8 feeMethod,uint8 side,uint8 saleKind,uint8 howToCall,bytes calldata,bytes replacementPattern,bytes staticExtradata)",
+		"source": "open-sea"
+	}],
+	"72593b4c": [{
+		"signature": "ordersCanMatch_(address[14] addrs,uint256[18] uints,uint8[8] feeMethodsSidesKindsHowToCalls,bytes calldataBuy,bytes calldataSell,bytes replacementPatternBuy,bytes replacementPatternSell,bytes staticExtradataBuy,bytes staticExtradataSell)",
+		"source": "open-sea"
+	}],
+	"7ccefc52": [{
+		"signature": "minimumMakerProtocolFee()",
+		"source": "open-sea"
+	}],
+	"7d766981": [{
+		"signature": "hashToSign_(address[7] addrs,uint256[9] uints,uint8 feeMethod,uint8 side,uint8 saleKind,uint8 howToCall,bytes calldata,bytes replacementPattern,bytes staticExtradata)",
+		"source": "open-sea"
+	}],
+	"8076f005": [{
+		"signature": "cancelledOrFinalized(bytes32)",
+		"source": "open-sea"
+	}],
+	"a25eb5d9": [{
+		"signature": "exchangeToken()",
+		"source": "open-sea"
+	}],
+	"a8a41c70": [{
+		"signature": "cancelOrder_(address[7] addrs,uint256[9] uints,uint8 feeMethod,uint8 side,uint8 saleKind,uint8 howToCall,bytes calldata,bytes replacementPattern,bytes staticExtradata,uint8 v,bytes32 r,bytes32 s)",
+		"source": "open-sea"
+	}],
+	"ab834bab": [{
+		"signature": "atomicMatch_(address[14] addrs,uint256[18] uints,uint8[8] feeMethodsSidesKindsHowToCalls,bytes calldataBuy,bytes calldataSell,bytes replacementPatternBuy,bytes replacementPatternSell,bytes staticExtradataBuy,bytes staticExtradataSell,uint8[2] vs,bytes32[5] rssMetadata)",
+		"source": "open-sea"
+	}],
+	"ca595b9a": [{
+		"signature": "validateOrderParameters_(address[7] addrs,uint256[9] uints,uint8 feeMethod,uint8 side,uint8 saleKind,uint8 howToCall,bytes calldata,bytes replacementPattern,bytes staticExtradata)",
+		"source": "open-sea"
+	}],
+	"cae6047f": [{
+		"signature": "INVERSE_BASIS_POINT()",
+		"source": "open-sea"
+	}],
+	"d537e131": [{
+		"signature": "calculateMatchPrice_(address[14] addrs,uint256[18] uints,uint8[8] feeMethodsSidesKindsHowToCalls,bytes calldataBuy,bytes calldataSell,bytes replacementPatternBuy,bytes replacementPatternSell,bytes staticExtradataBuy,bytes staticExtradataSell)",
+		"source": "open-sea"
+	}],
+	"e57d4adb": [{
+		"signature": "approvedOrders(bytes32)",
+		"source": "open-sea"
 	}],
 	"0e136b19": [{
 		"signature": "deprecated()",
