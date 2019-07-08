@@ -1,4 +1,4 @@
-const solc = require('solc');
+// const solc = require('solc');
 const keccak256 = require('js-sha3').keccak256;
 
 const fs = require('fs');
