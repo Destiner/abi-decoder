@@ -49,7 +49,10 @@ function getInputs(abiString) {
 		}
 		const name = entry.name;
 		const entryInputs = entry.inputs;
-		inputs[name] = entryInputs;
+		if (!(name in inputs)) {
+			inputs[name] = [];
+		}
+		inputs[name].push(entryInputs);
 	}
 	return inputs;
 }
@@ -57,13 +60,15 @@ function getInputs(abiString) {
 function getSignatures(inputs) {
 	const signatures = {};
 	for (const name in inputs) {
-		const entryInputs = inputs[name];
-		const fullSignature = _getFunctionSignature(name, entryInputs);
-		removeTypeNames(entryInputs);
-		const signature = _getFunctionSignature(name, entryInputs);
-		const functionHash = keccak256(signature);
-		const functionData = functionHash.substring(0, 8);
-		signatures[functionData] = fullSignature;
+		const entryInputList = inputs[name];
+		for (const entryInputs of entryInputList) {
+			const fullSignature = _getFunctionSignature(name, entryInputs);
+			removeTypeNames(entryInputs);
+			const signature = _getFunctionSignature(name, entryInputs);
+			const functionHash = keccak256(signature);
+			const functionData = functionHash.substring(0, 8);
+			signatures[functionData] = fullSignature;
+		}
 	}
 	return signatures;
 }
