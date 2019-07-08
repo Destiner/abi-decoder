@@ -1811,6 +1811,10 @@
 		"signature": "getApproved(uint256 tokenId)",
 		"source": "erc721"
 	}],
+	"42842e0e": [{
+		"signature": "safeTransferFrom(address from,address to,uint256 tokenId)",
+		"source": "erc721"
+	}],
 	"b88d4fde": [{
 		"signature": "safeTransferFrom(address from,address to,uint256 tokenId,bytes _data)",
 		"source": "erc721"
@@ -2496,6 +2500,14 @@
 	}],
 	"144a2752": [{
 		"signature": "getBuyAmount(address buy_gem,address pay_gem,uint256 pay_amt)",
+		"source": "oasis"
+	}],
+	"1b33d412": [{
+		"signature": "offer(uint256 pay_amt,address pay_gem,uint256 buy_amt,address buy_gem,uint256 pos)",
+		"source": "oasis"
+	}],
+	"e1a6f014": [{
+		"signature": "offer(uint256 pay_amt,address pay_gem,uint256 buy_amt,address buy_gem,uint256 pos,bool rounding)",
 		"source": "oasis"
 	}],
 	"f09ea2a6": [{
