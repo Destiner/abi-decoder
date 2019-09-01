@@ -1367,7 +1367,7 @@
 		"source": "dexag"
 	}],
 	"821d3bae": [{
-		"signature": "trade(address fromToken,address toToken,uint256 tokensAmount,address[] callAddresses,address[] approvals,bytes callDataConcat,uint256[] starts,uint256[] values,uint256 minTokensAmount)",
+		"signature": "trade(address fromToken,address toToken,uint256 tokensAmount,address[] callAddresses,address[] approvals,bytes callDataConcat,uint256[] starts,uint256[] value,uint256 minTokensAmount)",
 		"source": "dexag"
 	}],
 	"69fe0e2d": [{
