@@ -95,6 +95,9 @@
 		"source": "ddex"
 	}, {
 		"signature": "owner()",
+		"source": "dexag"
+	}, {
+		"signature": "owner()",
 		"source": "dydx"
 	}, {
 		"signature": "owner()",
@@ -134,6 +137,9 @@
 	}, {
 		"signature": "transferOwnership(address newOwner)",
 		"source": "ddex"
+	}, {
+		"signature": "transferOwnership(address newOwner)",
+		"source": "dexag"
 	}, {
 		"signature": "transferOwnership(address newOwner)",
 		"source": "dydx"
@@ -1292,6 +1298,9 @@
 		"source": "ddex"
 	}, {
 		"signature": "renounceOwnership()",
+		"source": "dexag"
+	}, {
+		"signature": "renounceOwnership()",
 		"source": "dydx"
 	}, {
 		"signature": "renounceOwnership()",
@@ -1308,6 +1317,9 @@
 	"8f32d59b": [{
 		"signature": "isOwner()",
 		"source": "ddex"
+	}, {
+		"signature": "isOwner()",
+		"source": "dexag"
 	}, {
 		"signature": "isOwner()",
 		"source": "dydx"
@@ -1339,6 +1351,36 @@
 	"fa352c00": [{
 		"signature": "revokeDelegate(address delegate)",
 		"source": "ddex"
+	}],
+	"ddca3f43": [{
+		"signature": "fee()",
+		"source": "dexag"
+	}, {
+		"signature": "fee()",
+		"source": "makerdao"
+	}, {
+		"signature": "fee()",
+		"source": "tokenstore"
+	}],
+	"e8edc816": [{
+		"signature": "spender()",
+		"source": "dexag"
+	}],
+	"821d3bae": [{
+		"signature": "trade(address fromToken,address toToken,uint256 tokensAmount,address[] callAddresses,address[] approvals,bytes callDataConcat,uint256[] starts,uint256[] values,uint256 minTokensAmount)",
+		"source": "dexag"
+	}],
+	"69fe0e2d": [{
+		"signature": "setFee(uint256 _fee)",
+		"source": "dexag"
+	}],
+	"1c31f710": [{
+		"signature": "setBeneficiary(address _beneficiary)",
+		"source": "dexag"
+	}],
+	"31b15823": [{
+		"signature": "setProveQ(address _proveq)",
+		"source": "dexag"
 	}],
 	"00599e65": [{
 		"signature": "getTokenOrder(address token1,address token2)",
@@ -2434,13 +2476,6 @@
 	"d9c27cc6": [{
 		"signature": "setPep(address pep_)",
 		"source": "makerdao"
-	}],
-	"ddca3f43": [{
-		"signature": "fee()",
-		"source": "makerdao"
-	}, {
-		"signature": "fee()",
-		"source": "tokenstore"
 	}],
 	"de5f5517": [{
 		"signature": "lad(bytes32 cup)",
