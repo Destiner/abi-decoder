@@ -13,7 +13,7 @@
     "ethers": "^4.0.30",
     "js-sha3": "^0.8.0",
     "solc": "^0.5.9",
-    "vue": "^2.6.10",
+    "vue": "^2.6.11",
     "vue-router": "^3.0.6"
   },
   "devDependencies": {
@@ -27,9 +27,9 @@
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
     "vue-loader": "^15.7.0",
-    "vue-template-compiler": "^2.6.10",
+    "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.11.0"
   }
 }
